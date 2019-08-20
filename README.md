@@ -10,6 +10,8 @@ This tool create the App Store and Google Play screenshots with different themes
 * A HTML preview for all the screenshots generated with a magnifier!
 * Easy integration on CI/CD pipelines
 
+![App Stores Design Automation][doc-design-automation]
+
 ## Getting started
 
 ### Configure your screens
@@ -153,6 +155,7 @@ Example of a `/app/{bundle ID}/theme.json`
 * Create more themes
 * Extend the CLI with a wizard to create a new app (bundleID, theme to use, number of screenshots, etc.)
 
+[doc-design-automation]: /doc/images/design-automation.jpg
 [apple-ipad-pro-12.9-white]: /src/layouts/devices/apple-ipad-pro-12.9-white/frame.png
 [apple-iphone-7-plus-white]: /src/layouts/devices/apple-iphone-7-plus-white/frame.png
 [apple-iphone-x-black]: /src/layouts/devices/apple-iphone-x-black/frame.png
