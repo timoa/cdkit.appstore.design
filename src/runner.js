@@ -43,12 +43,15 @@ function createDesignConfig(args) {
 
 /**
  * Generate the App Stores Design
- * @param {String} args
+ * @param {Object} args
+ * @param {String} args.app
+ * @param {String} args.platform
+ * @param {String} args.screenshots
  */
 function createDesign(args) {
   const appTheme = require(`../apps/${args.app}/theme.json`); // eslint-disable-line
   const screens = require(`../apps/${args.app}/screens.json`); // eslint-disable-line
-  const theme = Theme.loadTheme(appTheme.theme);
+  const theme = Theme.loadTheme(args.app, appTheme.theme);
 
   const screenshotsPath = args.screenshots || '../screenshots'; // Screenshots folder outside the project
 

@@ -1,9 +1,9 @@
-const fs = require('fs')
-const path = require('path')
-const _ = require('lodash')
-const Utils = require('./utils')
+const fs = require('fs');
+const path = require('path');
+const _ = require('lodash');
+const Utils = require('./utils');
 
-const Theme = {}
+const Theme = {};
 
 /**
  * Merge theme configs
@@ -12,7 +12,7 @@ const Theme = {}
  * @return {Object}             Config object
  */
 function mergeConfigs (themeConfig, appConfig) {
-  return _.merge(themeConfig, appConfig)
+  return _.merge(themeConfig, appConfig);
 }
 
 /**
@@ -21,7 +21,7 @@ function mergeConfigs (themeConfig, appConfig) {
  * @return {String}       Theme configuration path
  */
 function getThemeConfigPath (theme) {
-  return path.join(Utils.getThemePath(theme), '/theme.json')
+  return path.join(Utils.getThemePath(theme), '/theme.json');
 }
 
 /**
@@ -30,7 +30,7 @@ function getThemeConfigPath (theme) {
  * @return {String}       App theme configuration path
  */
 function getAppThemeConfigPath (app) {
-  return path.join(__dirname, '../../apps/', app, 'theme.json')
+  return path.join(__dirname, '../../apps/', app, 'theme.json');
 }
 
 /**
@@ -39,8 +39,8 @@ function getAppThemeConfigPath (app) {
  * @return {Boolean}      Return true or false
  */
 function isAppThemeConfigExists (app) {
-  const appThemePath = getAppThemeConfigPath(app)
-  return fs.existsSync(appThemePath)
+  const appThemePath = getAppThemeConfigPath(app);
+  return fs.existsSync(appThemePath);
 }
 
 /**
@@ -58,9 +58,8 @@ Theme.getFontPath = (theme, font) => {
  * @param {String} appName  App name
  * @returns {Object}        Theme object
  */
-Theme.loadTheme = (appName) => {
-  let theme = 'default'
-  let appConfig
+Theme.loadTheme = (appName, theme = 'default') => {
+  let appConfig;
 
   if (isAppThemeConfigExists(appName)) {
     appConfig = require(getAppThemeConfigPath(appName)); // eslint-disable-line
@@ -71,8 +70,10 @@ Theme.loadTheme = (appName) => {
 
   // If app theme config, merge it with the default settings
   if (_.isObject(appConfig)) {
-    themeConfig = mergeConfigs(themeConfig, appConfig)
+    themeConfig = mergeConfigs(themeConfig, appConfig);
   }
+  // console.log(JSON.stringify(themeConfig));
+
   return themeConfig
 }
 
