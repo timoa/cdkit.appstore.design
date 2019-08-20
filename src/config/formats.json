@@ -1,0 +1,38 @@
+[
+  {
+    "name": "iphone-5.5",
+    "platform": "ios",
+    "width": 1242,
+    "height": 2208
+  },
+  {
+    "name": "iphone-5.8",
+    "platform": "ios",
+    "width": 1125,
+    "height": 2436
+  },
+  {
+    "name": "ipad-12.9",
+    "platform": "ios",
+    "width": 2048,
+    "height": 2732
+  },
+  {
+    "name": "phone",
+    "platform": "android",
+    "width": 1080,
+    "height": 1920
+  },
+  {
+    "name": "tablet-7.0",
+    "platform": "android",
+    "width": 1200,
+    "height": 1920
+  },
+  {
+    "name": "tablet-10.0",
+    "platform": "android",
+    "width": 1800,
+    "height": 2560
+  }
+]

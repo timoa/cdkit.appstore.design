@@ -1,0 +1,100 @@
+{
+  "name": "default",
+  "backgroundColor": "#86569A",
+  "font": "HelveticaNeueLight.ttf",
+  "title": {
+    "position": {
+      "x": 0,
+      "y": 125,
+      "orientation": "North"
+    },
+    "color": "#FFFFFF",
+    "fontSize": 82
+  },
+  "subtitle": {
+    "position": {
+      "x": 0,
+      "y": 250,
+      "orientation": "North"
+    },
+    "color": "#C2AACC",
+    "fontSize": 62
+  },
+  "formats": {
+    "iphone-5.5": {
+      "device": "apple-iphone-7-plus-white",
+      "frame": {
+        "position": "+130+450"
+      },
+      "screenshot": {
+        "position": "+199+680",
+        "width": 847,
+        "height": 1498,
+        "source": "414x736"
+      }
+    },
+    "iphone-5.8": {
+      "device": "apple-iphone-x-black",
+      "frame": {
+        "position": "+63+390",
+        "mask": true
+      },
+      "screenshot": {
+        "position": "+120+437",
+        "width": 887,
+        "height": 1920,
+        "source": "375x812"
+      }
+    },
+    "ipad-12.9": {
+      "device": "apple-ipad-pro-12.9-white",
+      "frame": {
+        "position": "+181+570"
+      },
+      "screenshot": {
+        "position": "+310+791",
+        "width": 1643,
+        "height": 1907,
+        "source": "1024x1366"
+      }
+    },
+    "phone": {
+      "device": "google-pixel-2",
+      "frame": {
+        "position": "+134+488",
+        "mask": true
+      },
+      "screenshot": {
+        "position": "+173+620",
+        "width": 733,
+        "height": 1303,
+        "source": "1080x1920"
+      }
+    },
+    "tablet-7.0": {
+      "device": "google-nexus-7-2013",
+      "frame": {
+        "position": "+185+592"
+      },
+      "screenshot": {
+        "position": "+254+772",
+        "width": 695,
+        "height": 1112,
+        "source": "1200x1920"
+      }
+    },
+    "tablet-10.0": {
+      "device": "google-nexus-9",
+      "frame": {
+        "position": "+190+675"
+      },
+      "screenshot": {
+        "position": "+272+889",
+        "width": 1253,
+        "height": 1782,
+        "source": "1800x2560"
+      }
+    }
+  },
+  "theme": "default"
+}
