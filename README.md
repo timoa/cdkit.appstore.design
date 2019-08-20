@@ -16,13 +16,13 @@ This tool create the App Store and Google Play screenshots with different themes
 
 ### Configure your screens
 
-First create a folder with your app bundle ID (ex. com.company.app):
+1) Create a folder with your app bundle ID (ex. com.company.app):
 
-```bash
-mkdir app/com.company.app
-```
+  ```bash
+  mkdir app/com.company.app
+  ```
 
-Create a `screens.json` (see template below) and add configure each title, subtitle and source filename.
+2) Create a `screens.json` (see template below) and add configure each title, subtitle and source filename.
 
 Example of a `/app/{bundle ID}/screens.json`
 
