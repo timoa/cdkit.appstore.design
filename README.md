@@ -12,6 +12,10 @@ This tool create the App Store and Google Play screenshots with different themes
 
 ![App Stores Design Automation][doc-design-automation]
 
+## Quick video
+
+[![CDKit Design Automation demo](https://img.youtube.com/vi/wT4t4d7lgr4/0.jpg)](https://www.youtube.com/watch?v=wT4t4d7lgr4 "CDKit Design Automation demo")
+
 ## Getting started
 
 ### Configure your screens
@@ -150,9 +154,10 @@ Example of a `/app/{bundle ID}/theme.json`
 
 ## TODO
 
-* Add multi-language support
+* Add multi-languages support
 * Add more recent devices
 * Create more themes
+* Generate the HTML preview instead of using a static HTML file (needed for multi-languages support)
 * Extend the CLI with a wizard to create a new app (bundleID, theme to use, number of screenshots, etc.)
 
 [doc-design-automation]: /doc/images/design-automation.jpg
