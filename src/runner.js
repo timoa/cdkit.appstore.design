@@ -16,7 +16,7 @@ const formats = require('./config/formats.json');
  * @param {String} args.platform      Platform name
  * @param {String} args.tmpPath       Temporary path
  * @param {String} args.destFilename  Destination filename
- * 
+ *
  */
 function createDesignConfig(args) {
   return new Promise((resolve, reject) => {
@@ -32,7 +32,7 @@ function createDesignConfig(args) {
         subtitle: args.screen.subtitle,
         fontPath: Theme.getFontPath(args.theme.name, args.theme.font),
         platform: args.platform,
-        destFilename: args.destFilename
+        destFilename: args.destFilename,
       };
       resolve(designConfig);
     } catch (err) {
@@ -63,33 +63,48 @@ function createDesign(args) {
     // Loop on the different screenshot formats
     _.each(formats, (format) => {
       // If no platform or specific platform
-      if (!args.platform || (args.platform && format.platform === args.platform)) {
-        const destFilename = Utils.getDestFilename(index, format.name, screen.screenshot);
+      if (
+        !args.platform ||
+        (args.platform && format.platform === args.platform)
+      ) {
+        const destFilename = Utils.getDestFilename(
+          index,
+          format.name,
+          screen.screenshot,
+        );
 
         // Resize the screenshot
         IM.resizeScreenshot({
-          path: Utils.getScreenshotFilePath(screenshotsPath, format.platform, theme.formats[format.name].screenshot.source),
+          path: Utils.getScreenshotFilePath(
+            screenshotsPath,
+            format.platform,
+            theme.formats[format.name].screenshot.source,
+          ),
           filename: screen.screenshot,
           destFilename,
           width: theme.formats[format.name].screenshot.width,
-          height: theme.formats[format.name].screenshot.height
+          height: theme.formats[format.name].screenshot.height,
         })
-          .then(tmpPath => createDesignConfig({
-            theme,
-            format,
-            screen,
-            platform: args.platform,
-            tmpPath,
-            destFilename
-          }))
-          .then(designConfig => IM.addMask({
-            format: theme.formats[format.name],
-            designConfig
-          }))
+          .then((tmpPath) =>
+            createDesignConfig({
+              theme,
+              format,
+              screen,
+              platform: args.platform,
+              tmpPath,
+              destFilename,
+            }),
+          )
+          .then((designConfig) =>
+            IM.addMask({
+              format: theme.formats[format.name],
+              designConfig,
+            }),
+          )
           .then(IM.composeDesign);
-  }
+      }
     }); // Formats
   }); // Screens
 }
 
-module.exports = createDesign
+module.exports = createDesign;

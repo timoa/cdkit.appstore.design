@@ -8,5 +8,5 @@ describe('Runner', () => {
       // expect(lib({ platform: 'android', app: 'com.timoa.ciremote',})).to.not.throw();
       done();
     });
-  });  
+  });
 });

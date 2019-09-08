@@ -10,8 +10,12 @@ describe('Theme library', () => {
       done();
     });
     it('expect the "getFontPath()" to return a valid path for the font `HelveticaNeueLight.ttf`', (done) => {
-      expect(lib.getFontPath('default', 'HelveticaNeueLight.ttf')).to.be.a('string');
-      expect(lib.getFontPath('default', 'HelveticaNeueLight.ttf')).to.contains('/src/layouts/themes/default/fonts/HelveticaNeueLight.ttf');
+      expect(lib.getFontPath('default', 'HelveticaNeueLight.ttf')).to.be.a(
+        'string',
+      );
+      expect(lib.getFontPath('default', 'HelveticaNeueLight.ttf')).to.contains(
+        '/src/layouts/themes/default/fonts/HelveticaNeueLight.ttf',
+      );
       done();
     });
   });

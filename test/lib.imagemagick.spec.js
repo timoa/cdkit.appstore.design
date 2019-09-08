@@ -19,7 +19,6 @@ describe('ImageMagick library', () => {
     //     done
     //   })).to.not.throw();
     // });
-
   });
 
   describe('addMask()', () => {

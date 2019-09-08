@@ -11,12 +11,16 @@ describe('Utils library', () => {
     });
     it('expect the "getDevicePath()" to return a valid path for the `Google Pixel 2`', (done) => {
       expect(lib.getDevicePath('google-pixel-2')).to.be.a('string');
-      expect(lib.getDevicePath('google-pixel-2')).to.be.contains('/src/layouts/devices/google-pixel-2');
+      expect(lib.getDevicePath('google-pixel-2')).to.be.contains(
+        '/src/layouts/devices/google-pixel-2',
+      );
       done();
     });
     it('expect the "getDevicePath()" to return a valid path for the `iPad Pro 12.9`', (done) => {
       expect(lib.getDevicePath('apple-ipad-pro-12.9-white')).to.be.a('string');
-      expect(lib.getDevicePath('apple-ipad-pro-12.9-white')).to.contains('/src/layouts/devices/apple-ipad-pro-12.9-white');
+      expect(lib.getDevicePath('apple-ipad-pro-12.9-white')).to.contains(
+        '/src/layouts/devices/apple-ipad-pro-12.9-white',
+      );
       done();
     });
   });
@@ -28,12 +32,16 @@ describe('Utils library', () => {
     });
     it('expect the "getThemePath()" to return a valid path for the `Google Pixel 2`', (done) => {
       expect(lib.getThemePath('google-pixel-2')).to.be.a('string');
-      expect(lib.getThemePath('google-pixel-2')).to.be.contains('/src/layouts/themes/google-pixel-2');
+      expect(lib.getThemePath('google-pixel-2')).to.be.contains(
+        '/src/layouts/themes/google-pixel-2',
+      );
       done();
     });
     it('expect the "getThemePath()" to return a valid path for the `iPad Pro 12.9`', (done) => {
       expect(lib.getThemePath('apple-ipad-pro-12.9-white')).to.be.a('string');
-      expect(lib.getThemePath('apple-ipad-pro-12.9-white')).to.contains('/src/layouts/themes/apple-ipad-pro-12.9-white');
+      expect(lib.getThemePath('apple-ipad-pro-12.9-white')).to.contains(
+        '/src/layouts/themes/apple-ipad-pro-12.9-white',
+      );
       done();
     });
   });
@@ -61,13 +69,21 @@ describe('Utils library', () => {
       done();
     });
     it('expect the "getScreenshotFilePath()" to return a valid path with the platform Android', (done) => {
-      expect(lib.getScreenshotFilePath('/tmp', 'android', 'screenshot.png')).to.be.a('string');
-      expect(lib.getScreenshotFilePath('/tmp', 'android', 'screenshot.png')).to.be.equals('/tmp/android/screenshot.png');
+      expect(
+        lib.getScreenshotFilePath('/tmp', 'android', 'screenshot.png'),
+      ).to.be.a('string');
+      expect(
+        lib.getScreenshotFilePath('/tmp', 'android', 'screenshot.png'),
+      ).to.be.equals('/tmp/android/screenshot.png');
       done();
     });
     it('expect the "getScreenshotFilePath()" to return a valid path with the platform iOS', (done) => {
-      expect(lib.getScreenshotFilePath('/tmp', 'ios', 'screenshot.png')).to.be.a('string');
-      expect(lib.getScreenshotFilePath('/tmp', 'ios', 'screenshot.png')).to.be.equals('/tmp/ios/screenshot.png');
+      expect(
+        lib.getScreenshotFilePath('/tmp', 'ios', 'screenshot.png'),
+      ).to.be.a('string');
+      expect(
+        lib.getScreenshotFilePath('/tmp', 'ios', 'screenshot.png'),
+      ).to.be.equals('/tmp/ios/screenshot.png');
       done();
     });
   });
@@ -78,13 +94,21 @@ describe('Utils library', () => {
       done();
     });
     it('expect the "getDestFilename()" to return a valid path with the platform Android', (done) => {
-      expect(lib.getDestFilename(0, 'phone', 'screenshot.png')).to.be.a('string');
-      expect(lib.getDestFilename(0, 'phone', 'screenshot.png')).to.be.equals('1-phone.png');
+      expect(lib.getDestFilename(0, 'phone', 'screenshot.png')).to.be.a(
+        'string',
+      );
+      expect(lib.getDestFilename(0, 'phone', 'screenshot.png')).to.be.equals(
+        '1-phone.png',
+      );
       done();
     });
     it('expect the "getDestFilename()" to return a valid path with the platform iOS', (done) => {
-      expect(lib.getDestFilename(0,'ipad-12.9', 'screenshot.png')).to.be.a('string');
-      expect(lib.getDestFilename(0,'ipad-12.9', 'screenshot.png')).to.be.equals('1-ipad-12.9.png');
+      expect(lib.getDestFilename(0, 'ipad-12.9', 'screenshot.png')).to.be.a(
+        'string',
+      );
+      expect(
+        lib.getDestFilename(0, 'ipad-12.9', 'screenshot.png'),
+      ).to.be.equals('1-ipad-12.9.png');
       done();
     });
   });

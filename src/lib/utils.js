@@ -30,7 +30,7 @@ Utils.logger = (title, text, status) => {
       console.log(`  ${figures('✔').green} ${title.bold} ${text}`);
       break;
   }
-}
+};
 
 /**
  * Get the device folder path
@@ -39,7 +39,7 @@ Utils.logger = (title, text, status) => {
  */
 Utils.getDevicePath = (device) => {
   return path.join(__dirname, '../layouts/devices/', device);
-}
+};
 
 /**
  * Get the theme folder path
@@ -48,7 +48,7 @@ Utils.getDevicePath = (device) => {
  */
 Utils.getThemePath = (theme) => {
   return path.join(__dirname, '../layouts/themes/', theme);
-}
+};
 
 /**
  * Get the dist folder path based on the platform
@@ -57,7 +57,7 @@ Utils.getThemePath = (theme) => {
  */
 Utils.getDistPath = (platform) => {
   return path.join(__dirname, '../../dist/', platform);
-}
+};
 
 /**
  * Get the Screenshot file path
@@ -68,7 +68,7 @@ Utils.getDistPath = (platform) => {
  */
 Utils.getScreenshotFilePath = (screenshotsPath, platform, sourceFile) => {
   return path.join(screenshotsPath, platform, sourceFile);
-}
+};
 
 /**
  * Get destination filename
@@ -78,8 +78,8 @@ Utils.getScreenshotFilePath = (screenshotsPath, platform, sourceFile) => {
  * @returns {String}          Destination filename
  */
 Utils.getDestFilename = (index, format, filename) => {
-  const extention = filename.substr(-4, filename.length)
-  return _.join([(index + 1), format], '-') + extention;
-}
+  const extention = filename.substr(-4, filename.length);
+  return _.join([index + 1, format], '-') + extention;
+};
 
 module.exports = Utils;

@@ -11,7 +11,7 @@ const Theme = {};
  * @param {Object} appConfig    App theme config
  * @return {Object}             Config object
  */
-function mergeConfigs (themeConfig, appConfig) {
+function mergeConfigs(themeConfig, appConfig) {
   return _.merge(themeConfig, appConfig);
 }
 
@@ -20,7 +20,7 @@ function mergeConfigs (themeConfig, appConfig) {
  * @param {String} theme  Theme name
  * @return {String}       Theme configuration path
  */
-function getThemeConfigPath (theme) {
+function getThemeConfigPath(theme) {
   return path.join(Utils.getThemePath(theme), '/theme.json');
 }
 
@@ -29,7 +29,7 @@ function getThemeConfigPath (theme) {
  * @param {String} name   App name
  * @return {String}       App theme configuration path
  */
-function getAppThemeConfigPath (app) {
+function getAppThemeConfigPath(app) {
   return path.join(__dirname, '../../apps/', app, 'theme.json');
 }
 
@@ -38,7 +38,7 @@ function getAppThemeConfigPath (app) {
  * @param {String} app    App name
  * @return {Boolean}      Return true or false
  */
-function isAppThemeConfigExists (app) {
+function isAppThemeConfigExists(app) {
   const appThemePath = getAppThemeConfigPath(app);
   return fs.existsSync(appThemePath);
 }
@@ -50,8 +50,8 @@ function isAppThemeConfigExists (app) {
  * @returns {String}      Font filename path
  */
 Theme.getFontPath = (theme, font) => {
-  return path.join(__dirname, '../layouts/themes/', theme, '/fonts/', font)
-}
+  return path.join(__dirname, '../layouts/themes/', theme, '/fonts/', font);
+};
 
 /**
  * Load theme by name
@@ -74,7 +74,7 @@ Theme.loadTheme = (appName, theme = 'default') => {
   }
   // console.log(JSON.stringify(themeConfig));
 
-  return themeConfig
-}
+  return themeConfig;
+};
 
-module.exports = Theme
+module.exports = Theme;
