@@ -25,15 +25,20 @@ IM.resizeScreenshot = (args) => {
       gm(sourcePath)
         .resize(args.width, args.height)
         .write(tmpPath, () => {
-          Utils.logger('Resize source:', `${args.filename} => ${args.destFilename}`);
+          Utils.logger(
+            'Resize source:',
+            `${args.filename} => ${args.destFilename}`,
+          );
           resolve(tmpPath);
-        })
+        });
     } else {
-      const error = new Error(`The source path ${args.sourcePath} doesn't exist`);
+      const error = new Error(
+        `The source path ${args.sourcePath} doesn't exist`,
+      );
       reject(error);
     }
   });
-}
+};
 
 /**
  *
@@ -45,15 +50,25 @@ IM.addMask = (args) => {
   return new Promise((resolve, reject) => {
     try {
       if (args.format.frame.mask) {
-        const maskPath = path.join(Utils.getDevicePath(args.format.device), '/mask.png');
+        const maskPath = path.join(
+          Utils.getDevicePath(args.format.device),
+          '/mask.png',
+        );
 
-        const gmComposite = `convert "${args.designConfig.screenshot}" "${maskPath}" -compose copy_opacity -composite -compose over -background transparent -flatten "${args.designConfig.screenshot}"`
+        const gmComposite = `convert "${
+          args.designConfig.screenshot
+        }" "${maskPath}" -compose copy_opacity -composite -compose over -background transparent -flatten "${
+          args.designConfig.screenshot
+        }"`;
 
         if (fs.existsSync(maskPath)) {
           exec(gmComposite, () => {
-            Utils.logger('Add mask:', `${args.designConfig.screenshot} (${args.format.device})`);
+            Utils.logger(
+              'Add mask:',
+              `${args.designConfig.screenshot} (${args.format.device})`,
+            );
             resolve(args.designConfig);
-          })
+          });
         } else {
           const error = new Error(`The mask path ${maskPath} doesn't exist`);
           reject(error);
@@ -62,11 +77,15 @@ IM.addMask = (args) => {
         resolve(args.designConfig);
       }
     } catch (err) {
-      const error = new Error(`Error when applying the mask to the ${args.designConfig.screenshot} image`);
+      const error = new Error(
+        `Error when applying the mask to the ${
+          args.designConfig.screenshot
+        } image`,
+      );
       reject(error);
     }
   });
-}
+};
 
 /**
  * Compose the design with the screenshot + frame + texts
@@ -92,13 +111,23 @@ IM.composeDesign = (args) => {
         // Set the title font and font size
         .font(args.fontPath, args.theme.title.fontSize)
         // Draw the title text
-        .drawText(args.theme.title.position.x, args.theme.title.position.y, args.title, args.theme.title.position.orientation)
+        .drawText(
+          args.theme.title.position.x,
+          args.theme.title.position.y,
+          args.title,
+          args.theme.title.position.orientation,
+        )
         // Set subtitle font color
         .fill(args.theme.subtitle.color)
         // Set the subtitle font and font size
         .font(args.fontPath, args.theme.subtitle.fontSize)
         // Draw the subtitle text
-        .drawText(args.theme.subtitle.position.x, args.theme.subtitle.position.y, args.subtitle, args.theme.subtitle.position.orientation)
+        .drawText(
+          args.theme.subtitle.position.x,
+          args.theme.subtitle.position.y,
+          args.subtitle,
+          args.theme.subtitle.position.orientation,
+        )
         // Set the position for the device frame layer
         .in('-page', args.format.frame.position)
         // Create the the device frame layer
@@ -109,16 +138,20 @@ IM.composeDesign = (args) => {
         .in(args.screenshot)
         // Merge the layers
         .flatten()
-        .write(path.join(Utils.getDistPath(args.platform), args.destFilename), () => {
-          Utils.logger('Create design:', `${args.destFilename}`);
-          resolve();
-        });
+        .write(
+          path.join(Utils.getDistPath(args.platform), args.destFilename),
+          () => {
+            Utils.logger('Create design:', `${args.destFilename}`);
+            resolve();
+          },
+        );
     } catch (err) {
-      const error = new Error(`Error while creating the screenshot ${args.destFilename}`);
+      const error = new Error(
+        `Error while creating the screenshot ${args.destFilename}`,
+      );
       reject(error);
     }
   });
-
-}
+};
 
 module.exports = IM;

@@ -8,12 +8,12 @@ const runner = require('./runner');
  * @param args
  * @returns {boolean}
  */
-function validateArguments (args) {
-  const platforms = ['android', 'ios']
+function validateArguments(args) {
+  const platforms = ['android', 'ios'];
   if (args.p && !platforms.includes(args.p)) {
-    throw Error('Invalid platform: you must select one of ios or android')
+    throw Error('Invalid platform: you must select one of ios or android');
   }
-  return true
+  return true;
 }
 
 const argv = require('yargs') // eslint-disable-line
@@ -23,24 +23,23 @@ const argv = require('yargs') // eslint-disable-line
     describe: 'App bundle ID',
     required: true,
     requiresArg: true,
-    type: 'string'
+    type: 'string',
   })
   .options('screenshots', {
     alias: 's',
     describe: 'Path to the screenshots',
     requiresArg: true,
-    type: 'string'
+    type: 'string',
   })
   .options('platform', {
     alias: 'p',
     describe: 'Limit the generation to a specific platform',
     requiresArg: true,
-    type: 'string'
+    type: 'string',
   })
   .check(validateArguments)
   .help()
-  .strict()
-  .argv
+  .strict().argv;
 
 // Environment information
 Utils.logger('Environment', '', 'bold');
@@ -50,6 +49,10 @@ Utils.logger('Node version:', `${process.version}\n`, 'info');
 Utils.logger('Design', '', 'bold');
 Utils.logger('Platform:', `${argv.platform}`, 'info');
 Utils.logger('App:', `${argv.app}`, 'info');
-Utils.logger('Screenshots path:', `${(argv.screenshots ? argv.screenshots : 'nc')}\n`, 'info');
+Utils.logger(
+  'Screenshots path:',
+  `${argv.screenshots ? argv.screenshots : 'nc'}\n`,
+  'info',
+);
 
 runner(argv);
