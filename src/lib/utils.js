@@ -63,11 +63,11 @@ Utils.getDistPath = (platform) => {
  * Get the Screenshot file path
  * @param {String} screenshotsPath  Screenshots folder path
  * @param {String} platform         Screenshot platform
- * @param {String} sourceFile       Source file path
+ * @param {String} formatPath       Format path
  * @returns {String}                Screenshot file path
  */
-Utils.getScreenshotFilePath = (screenshotsPath, platform, sourceFile) => {
-  return path.join(screenshotsPath, platform, sourceFile);
+Utils.getScreenshotFilePath = (screenshotsPath, platform, formatPath) => {
+  return path.join(screenshotsPath, platform, formatPath);
 };
 
 /**
