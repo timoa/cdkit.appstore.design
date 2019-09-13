@@ -1,0 +1,51 @@
+[{
+    "title": "Screenshot 01",
+    "subtitle": "Screenshot 01 subtitle",
+    "screenshot": "screenshot-01.png"
+  },
+  {
+    "title": "Screenshot 02",
+    "subtitle": "Screenshot 02 subtitle",
+    "screenshot": "screenshot-02.png"
+  },
+  {
+    "title": "Screenshot 03",
+    "subtitle": "Screenshot 03 subtitle",
+    "screenshot": "screenshot-03.png"
+  },
+  {
+    "title": "Screenshot 04",
+    "subtitle": "Screenshot 04 subtitle",
+    "screenshot": "screenshot-04.png"
+  },
+  {
+    "title": "Screenshot 05",
+    "subtitle": "Screenshot 05 subtitle",
+    "screenshot": "screenshot-05.png"
+  },
+  {
+    "title": "Screenshot 06",
+    "subtitle": "Screenshot 06 subtitle",
+    "screenshot": "screenshot-06.png"
+  },
+  {
+    "title": "Screenshot 07",
+    "subtitle": "Screenshot 07 subtitle",
+    "screenshot": "screenshot-07.png"
+  },
+  {
+    "title": "Screenshot 08",
+    "subtitle": "Screenshot 08 subtitle",
+    "screenshot": "screenshot-08.png"
+  },
+  {
+    "title": "Screenshot 09",
+    "subtitle": "Screenshot 09 subtitle",
+    "screenshot": "screenshot-09.png"
+  },
+  {
+    "title": "Screenshot 10",
+    "subtitle": "Screenshot 10 subtitle",
+    "screenshot": "screenshot-10.png"
+  }
+]

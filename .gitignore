@@ -68,7 +68,8 @@ typings/
 .scannerwork
 
 # Apps folder
-apps/**/
+apps/*
+!apps/com.company.example/
 
 # Cache folders
 tmp/*

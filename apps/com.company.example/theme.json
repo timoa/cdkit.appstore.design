@@ -1,0 +1,11 @@
+{
+  "theme": "default",
+  "backgroundColor": "#86569A",
+  "font": "HelveticaNeueLight.ttf",
+  "title": {
+    "color": "#FFFFFF"
+  },
+  "subtitle": {
+    "color": "#C2AACC"
+  }
+}

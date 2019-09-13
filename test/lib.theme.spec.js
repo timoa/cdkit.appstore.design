@@ -25,8 +25,8 @@ describe('Theme library', () => {
       expect(lib.loadTheme).to.be.a('function');
       done();
     });
-    it('expect the "loadTheme()" to return the theme config for the `com.timoa.ciremote` app', (done) => {
-      const themeConfig = lib.loadTheme('com.timoa.ciremote');
+    it('expect the "loadTheme()" to return the theme config for the `com.company.example` app', (done) => {
+      const themeConfig = lib.loadTheme('com.company.example');
       expect(themeConfig).to.be.an('object');
       expect(themeConfig.name).to.be.equals('default');
       expect(themeConfig.title).to.be.an('object');
