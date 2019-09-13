@@ -69,7 +69,7 @@ typings/
 
 # Apps folder
 apps/*
-!apps/com.company.example/
+!apps/com.company.app/
 
 # Cache folders
 tmp/*
