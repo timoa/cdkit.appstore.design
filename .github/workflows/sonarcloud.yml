@@ -1,9 +1,13 @@
-on: push
 name: Code Analysis
+
+on: [push]
+
 jobs:
   sonarCloudTrigger:
+
     name: SonarCloud Trigger
     runs-on: ubuntu-latest
+    
     steps:
     - uses: actions/checkout@master
     - name: SonarCloud Scan
