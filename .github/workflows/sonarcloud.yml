@@ -1,0 +1,12 @@
+on: push
+name: Code Analysis
+jobs:
+  sonarCloudTrigger:
+    name: SonarCloud Trigger
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: SonarCloud Scan
+      uses: timoa/cdkit.appstore.design@master
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
