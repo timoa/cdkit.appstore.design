@@ -101,7 +101,8 @@ function createDesign(args) {
               designConfig,
             }),
           )
-          .then(IM.composeDesign);
+          .then(IM.composeDesign)
+          .catch(Utils.logger.error);
       }
     }); // Formats
   }); // Screens
