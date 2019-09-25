@@ -1,6 +1,6 @@
 # [CDKit](https://github.com/timoa/cdkit): App Stores Design Automation
 
-*[CDKit](https://github.com/timoa/cdkit) is a framework that helps to deploy mobile apps (iOS and Android) to the app stores (iTunes and Google Play).*
+*[CDKit](https://github.com/timoa/cdkit) is a DevOps framework that helps to deploy mobile apps (iOS and Android) to the app stores (iTunes and Google Play).*
 
 This tool create the App Store and Google Play screenshots with different themes and devices and it includes:
 
