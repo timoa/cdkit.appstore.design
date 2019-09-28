@@ -12,7 +12,19 @@
     "height": 2436
   },
   {
-    "name": "ipad-12.9",
+    "name": "iphone-6.5",
+    "platform": "ios",
+    "width": 1242,
+    "height": 2688
+  },
+  {
+    "name": "ipad-12.9-2nd-gen",
+    "platform": "ios",
+    "width": 2048,
+    "height": 2732
+  },
+  {
+    "name": "ipad-12.9-3rd-gen",
     "platform": "ios",
     "width": 2048,
     "height": 2732
