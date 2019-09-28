@@ -46,7 +46,19 @@
         "source": "375x812"
       }
     },
-    "ipad-12.9": {
+    "ipad-12.9-2nd-gen": {
+      "device": "apple-ipad-pro-12.9-white",
+      "frame": {
+        "position": "+181+570"
+      },
+      "screenshot": {
+        "position": "+310+791",
+        "width": 1643,
+        "height": 1907,
+        "source": "1024x1366"
+      }
+    },
+    "ipad-12.9-3nd-gen": {
       "device": "apple-ipad-pro-12.9-white",
       "frame": {
         "position": "+181+570"
