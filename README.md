@@ -1,5 +1,15 @@
 # [CDKit](https://github.com/timoa/cdkit): App Stores Design Automation
 
+[![Build Status][travis-badge]][travis-url]
+[![Quality Gate Status][sonarcloud-status-badge]][sonarcloud-url]
+[![Security Rating][sonarcloud-security-badge]][sonarcloud-url]
+[![Maintainability Rating][sonarcloud-maintainability-badge]][sonarcloud-url]
+
+[![Bugs][sonarcloud-bugs-badge]][sonarcloud-url]
+[![Code Smells][sonarcloud-codesmells-badge]][sonarcloud-url]
+[![Coverage][sonarcloud-coverage-badge]][sonarcloud-url]
+[![Duplicated Lines (%)][sonarcloud-duplicated-badge]][sonarcloud-url]
+
 *[CDKit](https://github.com/timoa/cdkit) is a DevOps framework that helps to deploy mobile apps (iOS and Android) to the app stores (iTunes and Google Play).*
 
 This tool create the App Store and Google Play screenshots with different themes and devices and it includes:
@@ -160,6 +170,17 @@ Example of a `/app/{bundle ID}/theme.json`
 * Generate the HTML preview instead of using a static HTML file (needed for multi-languages support)
 * Extend the CLI with a wizard to create a new app (bundleID, theme to use, number of screenshots, etc.)
 
+[sonarcloud]: https://sonarcloud.io/about
+[travis-badge]: https://travis-ci.com/timoa/cdkit.appstore.design.svg?branch=master
+[travis-url]: https://travis-ci.com/timoa/cdkit.appstore.design
+[sonarcloud-url]: https://sonarcloud.io/dashboard?id=timoa_cdkit.appstore.design
+[sonarcloud-status-badge]: https://sonarcloud.io/api/project_badges/measure?project=timoa_cdkit.appstore.design&metric=alert_status
+[sonarcloud-security-badge]: https://sonarcloud.io/api/project_badges/measure?project=timoa_cdkit.appstore.design&metric=security_rating
+[sonarcloud-maintainability-badge]: https://sonarcloud.io/api/project_badges/measure?project=timoa_cdkit.appstore.design&metric=sqale_rating
+[sonarcloud-bugs-badge]: https://sonarcloud.io/api/project_badges/measure?project=timoa_cdkit.appstore.design&metric=bugs
+[sonarcloud-codesmells-badge]: https://sonarcloud.io/api/project_badges/measure?project=timoa_cdkit.appstore.design&metric=code_smells
+[sonarcloud-coverage-badge]: https://sonarcloud.io/api/project_badges/measure?project=timoa_cdkit.appstore.design&metric=coverage
+[sonarcloud-duplicated-badge]: https://sonarcloud.io/api/project_badges/measure?project=timoa_cdkit.appstore.design&metric=duplicated_lines_density
 [doc-design-automation]: /doc/images/design-automation.jpg
 [apple-ipad-pro-12.9-white]: /src/layouts/devices/apple-ipad-pro-12.9-white/frame.png
 [apple-iphone-7-plus-white]: /src/layouts/devices/apple-iphone-7-plus-white/frame.png
