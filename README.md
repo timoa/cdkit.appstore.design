@@ -171,7 +171,7 @@ Example of a `/app/{bundle ID}/theme.json`
 * Extend the CLI with a wizard to create a new app (bundleID, theme to use, number of screenshots, etc.)
 
 [sonarcloud]: https://sonarcloud.io/about
-[github-badge]: https://github.com/timoa/cdkit.appstore.design/workflows/NodeJS/badge.svg
+[github-badge]: https://github.com/timoa/cdkit.appstore.design/workflows/Build/badge.svg
 [github-url]: https://github.com/timoa/cdkit.appstore.design
 [sonarcloud-url]: https://sonarcloud.io/dashboard?id=timoa_cdkit.appstore.design
 [sonarcloud-status-badge]: https://sonarcloud.io/api/project_badges/measure?project=timoa_cdkit.appstore.design&metric=alert_status
