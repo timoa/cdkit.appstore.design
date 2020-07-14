@@ -48,6 +48,9 @@ jobs:
           name: code-coverage
           path: coverage
 
+      - name: Get App Version
+        run: ./scripts/version.sh
+
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@master
         env:
