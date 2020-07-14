@@ -8,7 +8,9 @@
     "test": "./node_modules/.bin/mocha --reporter spec",
     "test:coverage": "./node_modules/.bin/nyc npm test",
     "test:functional": "./node_modules/.bin/mocha --reporter spec ./test/functional",
-    "test:all": "./node_modules/.bin/run-s test:functional test:coverage"
+    "test:all": "./node_modules/.bin/run-s test:functional test:coverage",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "bin": {
     "appstore-design": "./src/cli.js"
@@ -26,6 +28,7 @@
     "gm": "^1.23.1",
     "lodash": "^4.17.16",
     "yargs": "^13.1.0"
+    "snyk": "^1.316.1"
   },
   "engines": {
     "node": ">=10.0"
@@ -69,5 +72,6 @@
       "coverage/**"
     ],
     "all": true
-  }
+  },
+  "snyk": true
 }
