@@ -19,3 +19,5 @@ function readJson {
 }
 
 VERSION=`readJson package.json version` || exit 1;
+
+echo $VERSION
