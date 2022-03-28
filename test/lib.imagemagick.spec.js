@@ -8,10 +8,10 @@ const screenshotsPath = `${__dirname}/data/img`;
 
 // ImageMagick
 describe('ImageMagick library', () => {
-  
+
   describe('resizeScreenshot()', function () {
     this.timeout(6000);
-    
+
     it('expect the "resizeScreenshot()" to be a function', (done) => {
       expect(lib.resizeScreenshot).to.be.a('function');
       done();
