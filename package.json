@@ -3,6 +3,7 @@
   "version": "1.0.3",
   "description": "Create the screenshots assets for the App Store and Google Play with ImageMagick",
   "main": "src/cli.js",
+  "private": true,
   "scripts": {
     "start": "node src/cli",
     "test": "./node_modules/.bin/mocha --reporter spec",
@@ -31,7 +32,7 @@
     "yargs": "^16.0.0"
   },
   "engines": {
-    "node": ">=10.0"
+    "node": ">=12.0"
   },
   "os": [
     "linux",
