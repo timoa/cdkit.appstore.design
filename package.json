@@ -41,7 +41,7 @@
   ],
   "devDependencies": {
     "acorn": "6.4.2",
-    "acorn-jsx": "^5.0.0",
+    "acorn-jsx": "5.0.2",
     "chai": "^4.2.0",
     "eslint": "^5.9.0",
     "eslint-config-airbnb": "^17.1.0",
