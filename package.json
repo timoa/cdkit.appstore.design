@@ -24,7 +24,7 @@
   "license": "MIT",
   "homepage": "https://cdkit.org",
   "dependencies": {
-    "colors": "1.3.3",
+    "colors": "1.4.0",
     "figures": "2.0.0",
     "gm": "1.23.1",
     "lodash": "4.17.21",
