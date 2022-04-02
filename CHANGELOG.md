@@ -1,3 +1,15 @@
+## [1.0.5](https://github.com/timoa/cdkit.appstore.design/compare/v1.0.4...v1.0.5) (2022-04-02)
+
+
+### Bug Fixes
+
+* **deps:** update dependency snyk to v1.872.0 ([16193a4](https://github.com/timoa/cdkit.appstore.design/commit/16193a46c44b7521134aaf42077a6f7d9c2c1a62))
+* **deps:** update dependency snyk to v1.873.0 ([d8fcf72](https://github.com/timoa/cdkit.appstore.design/commit/d8fcf7208557728d37008a6ac13b46aab25e7e9f))
+* **deps:** update dependency snyk to v1.874.0 ([2ab355e](https://github.com/timoa/cdkit.appstore.design/commit/2ab355e4e7832bea9b1be66706cd6432f5e2657e))
+* **deps:** update dependency snyk to v1.875.0 ([c562327](https://github.com/timoa/cdkit.appstore.design/commit/c5623272f361c008067acfca279d6d0831fd77b2))
+* **deps:** update dependency snyk to v1.877.0 ([029b576](https://github.com/timoa/cdkit.appstore.design/commit/029b5768457c2279a17e3398bd896efc04eb0670))
+* **deps:** update dependency yargs to v16.2.0 ([eaf0452](https://github.com/timoa/cdkit.appstore.design/commit/eaf045288e2cdcbb0a6d0596a93c81cf4a10d103))
+
 ## [1.0.4](https://github.com/timoa/cdkit.appstore.design/compare/v1.0.3...v1.0.4) (2022-03-29)
 
 
