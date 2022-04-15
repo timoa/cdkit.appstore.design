@@ -10,6 +10,9 @@
     "dependencies",
     "security"
   ],
+  "assignees": [
+    "timoa"
+  ],
   "packageRules": [
     {
       "description": "Automerge renovate minor and patch updates",
