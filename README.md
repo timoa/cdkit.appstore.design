@@ -1,6 +1,8 @@
 # [CDKit](https://github.com/timoa/cdkit): App Stores Design Automation
 
+[![Latest Release][release-badge]][release-url]
 [![Build Status][github-badge]][github-url]
+
 [![Quality Gate Status][sonarcloud-status-badge]][sonarcloud-url]
 [![Security Rating][sonarcloud-security-badge]][sonarcloud-url]
 [![Maintainability Rating][sonarcloud-maintainability-badge]][sonarcloud-url]
@@ -171,6 +173,8 @@ Example of a `/app/{bundle ID}/theme.json`
 * Extend the CLI with a wizard to create a new app (bundleID, theme to use, number of screenshots, etc.)
 
 [sonarcloud]: https://sonarcloud.io/about
+[release-badge]: https://img.shields.io/github/v/release/timoa/cdkit.appstore.design?logoColor=orange
+[release-url]: https://github.com/timoa/cdkit.appstore.design/releases
 [github-badge]: https://github.com/timoa/cdkit.appstore.design/workflows/Build/badge.svg
 [github-url]: https://github.com/timoa/cdkit.appstore.design
 [sonarcloud-url]: https://sonarcloud.io/dashboard?id=timoa_cdkit.appstore.design
