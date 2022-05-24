@@ -25,7 +25,7 @@
   "license": "MIT",
   "homepage": "https://cdkit.org",
   "dependencies": {
-    "@snyk/protect": "1.922.0",
+    "@snyk/protect": "1.924.0",
     "colors": "1.4.0",
     "figures": "2.0.0",
     "gm": "1.23.1",
