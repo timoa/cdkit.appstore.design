@@ -101,7 +101,7 @@ jobs:
           path: reports
 
   # -- RELEASE ----------------------------------------------------------------
-  release:
+  pre-release:
     name: Prepare Release
     runs-on: ubuntu-latest
     needs:
@@ -127,7 +127,7 @@ jobs:
   build:
     name: Build & Release
     runs-on: ubuntu-latest
-    needs: release
+    needs: pre-release
 
     strategy:
       matrix:
