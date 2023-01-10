@@ -1,6 +1,6 @@
 {
   "name": "cdkit.appstore.design",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Create the screenshots assets for the App Store and Google Play with ImageMagick",
   "main": "src/cli.js",
   "private": true,
