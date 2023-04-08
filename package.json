@@ -4,15 +4,12 @@
   "description": "Create the screenshots assets for the App Store and Google Play with ImageMagick",
   "main": "src/cli.js",
   "private": true,
-  "snyk": true,
   "scripts": {
     "start": "node src/cli",
     "test": "./node_modules/.bin/mocha --reporter spec",
     "test:coverage": "./node_modules/.bin/nyc npm test",
     "test:functional": "./node_modules/.bin/mocha --reporter spec ./test/functional",
-    "test:all": "./node_modules/.bin/run-s test:functional test:coverage",
-    "snyk-protect": "snyk-protect",
-    "prepare": "npm run snyk-protect"
+    "test:all": "./node_modules/.bin/run-s test:functional test:coverage"
   },
   "bin": {
     "appstore-design": "./src/cli.js"
@@ -25,7 +22,6 @@
   "license": "MIT",
   "homepage": "https://cdkit.org",
   "dependencies": {
-    "@snyk/protect": "1.1126.0",
     "colors": "1.4.0",
     "figures": "2.0.0",
     "gm": "1.25.0",
